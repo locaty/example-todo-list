@@ -1,0 +1,5 @@
+.idea
+config/main.php
+/logs
+/cache
+/vendor
