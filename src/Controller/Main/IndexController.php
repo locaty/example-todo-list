@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Main;
 
+use App\Controller\Basic;
 use Locaty\Transfer\Response;
 
 class IndexController extends Basic {

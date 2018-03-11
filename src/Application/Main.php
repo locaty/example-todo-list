@@ -1,17 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Application;
 
+use App\SL;
 use Locaty;
 use Locaty\Component\Template;
 
-class Application extends Locaty\Application\BasicHttp {
+class Main extends Locaty\Application\BasicHttp {
 
     /**
      * @return array
      */
     protected function _routes(): array {
-        return require_once DIR_PROJECT . '/config/routes.php';
+        return require_once DIR_PROJECT . '/config/routes_main.php';
     }
 
     /**

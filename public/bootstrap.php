@@ -11,6 +11,3 @@ App\Config::init(require DIR_CONFIG .  '/default.main.php');
 if (file_exists(DIR_CONFIG . '/main.php')) {
     App\Config::init(require DIR_CONFIG . '/main.php');
 }
-
-$app = new App\Application();
-$app->run();
