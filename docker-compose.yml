@@ -1,0 +1,10 @@
+version: '3'
+services:
+  frontend:
+    image: m1nor/php-nginx
+    volumes:
+      - ./:/var/www/project
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8080:80
+    tty: yes
