@@ -1,7 +1,9 @@
 {
     "require": {
         "locaty/locaty": "dev-master",
-        "twig/twig": "^2.0"
+        "twig/twig": "^2.0",
+        "m1nor/php-orm": "dev-master",
+        "php-di/php-di": "^6.0"
     },
     "autoload": {
         "psr-4": {

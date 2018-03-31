@@ -1,0 +1,9 @@
+GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+CREATE TABLE `task` (
+  `id` int(16) UNSIGNED AUTO_INCREMENT,
+  `name` text DEFAULT NULL,
+  `status` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
