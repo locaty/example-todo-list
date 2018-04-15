@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controller;
+namespace App\Api\Controller;
 
 use Locaty\Component\Template;
 use Locaty\Controller;
 use Locaty\Transfer\Response;
 
-abstract class Basic extends Controller\Basic {
+class TaskController extends Controller\Basic {
 
     /**
-     * @return Template\Engine\Basic
+     * @return Response\Json
      */
-    protected function _getTemplateEngine(): Template\Engine\Basic {
-        return new Template\Engine\Twig(DIR_TEMPLATES);
+    public function listAction(): Response\Json {
+        return $this->_createApiResponse(['data' => []]);
     }
 
     /**

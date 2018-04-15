@@ -1,7 +1,7 @@
 <?php
 
-use App\Controller\Api;
+use App\Api\Controller;
 
 return [
-    'task_list' => ['GET', '/api/task/list', Api\TaskController::action('list')],
+    'task_list' => ['GET', '/api/task/list', Controller\TaskController::action('list')],
 ];

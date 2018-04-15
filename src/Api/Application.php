@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Application;
+namespace App\Api;
 
-use App\SL;
-use Locaty;
+use App\Core\AbstractHttpApplication;
 
-class Api extends Locaty\Application\BasicHttp {
+class Application extends AbstractHttpApplication {
 
     /**
      * @return array
      */
     protected function _routes(): array {
-        return require_once DIR_CONFIG . '/routes_api.php';
+        /** @noinspection PhpIncludeInspection */
+        return require_once $this->_path->getApiRoutesPath();
     }
 
     /**
@@ -25,7 +25,7 @@ class Api extends Locaty\Application\BasicHttp {
      * @param \Throwable $e
      */
     protected function _handleError(\Throwable $e): void {
-        SL::logger()->notifyException($e);
+        $this->_logger->notifyException($e);
         echo json_encode(['status' => 'error', 'error' => 'unknown_error']);
     }
 }

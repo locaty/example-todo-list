@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Application;
+namespace App\Web;
 
-use App\SL;
-use Locaty;
+use App\Core\AbstractHttpApplication;
 use Locaty\Component\Template;
 
-class Main extends Locaty\Application\BasicHttp {
+class Application extends AbstractHttpApplication {
 
     /**
      * @return array
      */
     protected function _routes(): array {
-        return require_once DIR_PROJECT . '/config/routes_main.php';
+        /** @noinspection PhpIncludeInspection */
+        return require_once $this->_path->getWebRoutesPath();
     }
 
     /**
@@ -26,7 +26,7 @@ class Main extends Locaty\Application\BasicHttp {
      * @param \Throwable $e
      */
     protected function _handleError(\Throwable $e): void {
-        SL::logger()->notifyException($e);
+        $this->_logger->notifyException($e);
         echo $this->_getTemplateEngine()->render('error_handlers/error_500');
     }
 
@@ -34,6 +34,6 @@ class Main extends Locaty\Application\BasicHttp {
      * @return Template\Engine\Basic
      */
     protected function _getTemplateEngine(): Template\Engine\Basic {
-        return new Template\Engine\Twig(DIR_TEMPLATES);
+        return new Template\Engine\Twig($this->_path->getTemplatesDir());
     }
 }
