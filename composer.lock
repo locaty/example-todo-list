@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d239604319819a79200fd9c0f0dbb1c",
+    "content-hash": "b06f0ff9983c35f56c2c97ad266f62b1",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -122,15 +122,21 @@
         {
             "name": "locaty/locaty",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/locaty/locaty.git",
+                "reference": "6ae10d63944c213a2beaed598499064f422d6460"
+            },
             "dist": {
-                "type": "path",
-                "url": "../locaty",
-                "reference": "08bb81824396d8f7e867c9c5113d2032e7aa67b9",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/locaty/locaty/zipball/6ae10d63944c213a2beaed598499064f422d6460",
+                "reference": "6ae10d63944c213a2beaed598499064f422d6460",
+                "shasum": ""
             },
             "require": {
                 "altorouter/altorouter": "^1.2",
                 "php-di/php-di": "^6.0",
+                "psr/container": "^1.0",
                 "rollbar/rollbar": "^1.4",
                 "twig/twig": "^2.0"
             },
@@ -144,11 +150,7 @@
                     "Locaty\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -157,7 +159,8 @@
                     "name": "Sergey Rudachenko",
                     "email": "m1no.serg@gmail.com"
                 }
-            ]
+            ],
+            "time": "2018-04-15 19:40:44"
         },
         {
             "name": "monolog/monolog",
@@ -528,16 +531,16 @@
         },
         {
             "name": "rollbar/rollbar",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rollbar/rollbar-php.git",
-                "reference": "a9f98e2c547854ae7a5c574a2a83ae1f5399b0ba"
+                "reference": "01581103fb7ab75d93e3aea66b198c22907e6e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/a9f98e2c547854ae7a5c574a2a83ae1f5399b0ba",
-                "reference": "a9f98e2c547854ae7a5c574a2a83ae1f5399b0ba",
+                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/01581103fb7ab75d93e3aea66b198c22907e6e88",
+                "reference": "01581103fb7ab75d93e3aea66b198c22907e6e88",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +587,7 @@
                 "logging",
                 "monitoring"
             ],
-            "time": "2018-03-17T12:23:55+00:00"
+            "time": "2018-04-06T03:11:03+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -755,16 +758,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.7",
+            "version": "v2.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc"
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/69aacd44dbbaa3199d5afb68605c996d577896fc",
-                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7b604c89da162034bdf4bb66310f358d313dd16d",
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d",
                 "shasum": ""
             },
             "require": {
@@ -817,7 +820,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-20T04:31:17+00:00"
+            "time": "2018-04-02T09:24:19+00:00"
         }
     ],
     "packages-dev": [],
